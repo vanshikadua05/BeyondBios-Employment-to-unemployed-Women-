@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Community</title>
+    <style>
+        .form-container {
+            max-width: 400px;
+            background-image: linear-gradient(#a0c7da, white);
+            box-shadow:20px -19px 8px rgb(0 0 0 / 24%);
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h2 {
+        color: #1e5783;
+        text-align: center;
+    }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #1e5783;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #134266;
+        }
+        .success-message {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Create Community</h2>
+        <form id="create-community-form" method="post" action="#">
+            <label for="jobseekeremail">Jobseeker Email:</label>
+            <input type="text" id="jobseekeremail" name="jobseekeremail" required>
+
+            <label for="jobseekername">Jobseeker Name:</label>
+            <textarea id="jobseekername" name="jobseekername" rows="4" required></textarea>
+            
+            <label for="communityname">Community Name:</label>
+            <textarea id="communityname" name="communityname" rows="4" required></textarea>
+            
+             <label for="communityid">Community ID:</label>
+            <textarea id="communityid" name="communityid" rows="4" required></textarea>
+            
+             <label for="communitypurpose">Community Purpose:</label>
+            <textarea id="communitypurpose" name="communitypurpose" rows="4" required></textarea>
+            
+             <label for="communitymembers">TC_Members:</label>
+            <textarea id="communitymembers" name="communitymembers" rows="4" required></textarea>
+
+            <input type="submit" value="Create Community">
+        </form>
+
+        <div id="success-message" class="success-message" style="display: none;">
+            Community created successfully!
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('create-community-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Here you would typically perform an AJAX request to submit the form data to the server
+            // For this example, we're just showing an alert
+            alert('Community created successfully!');
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
